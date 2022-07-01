@@ -1,6 +1,6 @@
 
 package paquete03;
-
-public class MenuEconomico {
+import paquete02.Menu;
+public class MenuEconomico extends Menu{
     
 }
