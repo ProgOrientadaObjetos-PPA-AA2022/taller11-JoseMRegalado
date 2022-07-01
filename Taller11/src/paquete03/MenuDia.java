@@ -7,7 +7,7 @@ public class MenuDia extends Menu{
     private double vBebida;
 
     public MenuDia(String np, double vm, double vim, double vp, double vb) {
-        super(np, vm, vim);
+        super(np, vim);
         vPostre = vp;
         vBebida = vb;
     }
@@ -31,10 +31,6 @@ public class MenuDia extends Menu{
     @Override
     public void establecerValorMenu() {
         valorMenu = valorInicialMenu + vPostre + obtenerValorBebida();
-    }
-
-    public double obtenerValorcancelartotal() {
-        return valorMenu;
     }
     
     @Override

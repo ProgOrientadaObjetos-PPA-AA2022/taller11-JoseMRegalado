@@ -6,7 +6,7 @@ public class MenuNiños extends Menu{
     private double pPastel;
 
     public MenuNiños(String np, double vm, double vim, double ph, double pp) {
-        super(np, vm, vim);
+        super(np, vim);
         pHelado = ph;
         pPastel = pp;
     }
@@ -30,10 +30,6 @@ public class MenuNiños extends Menu{
     @Override
     public void establecerValorMenu() {
         valorMenu = valorInicialMenu + pHelado + pPastel;
-    }
-
-    public double obtenervalorcancelartotal() {
-        return valorMenu;
     }
 
     @Override

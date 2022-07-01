@@ -5,6 +5,10 @@
  */
 package paquete01;
 
+import java.util.ArrayList;
+import paquete02.Menu;
+import paquete03.*;
+
 /**
  *
  * @author reroes
@@ -15,7 +19,10 @@ public class Ejecutor01 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+
+        ArrayList<Menu> menu = new ArrayList<>();
+
+        
     }
     
     

@@ -6,10 +6,15 @@ public class MenuCarta extends Menu{
     private double vGuarnicion;
     private double vBebida;
     private double pAdicional;
+    
+    public MenuCarta(String np, double vi) {
+        super(np, vi);
+
+    }
 
     public MenuCarta(String np, double vm, double vim, double g, 
             double b, double pa) {
-        super(np, vm, vim);
+        super(np, vim);
         vGuarnicion = g;
         vBebida = b;
         pAdicional = pa;
