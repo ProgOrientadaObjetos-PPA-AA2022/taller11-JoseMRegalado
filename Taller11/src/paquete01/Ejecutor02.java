@@ -6,7 +6,9 @@
 package paquete01;
 
 import java.util.ArrayList;
-
+import paquete02.Menu;
+import paquete03.*;
+import paquete04.Cuenta;
 /**
  *
  * @author reroes
@@ -37,13 +39,62 @@ public class Ejecutor02 {
                 
         
         // Lista de Menus
-        ArrayList lista = new ArrayList<>();
+        ArrayList <Menu> lista = new ArrayList<>();
         
         /* Agregar un proceso para generar objetos de tipo Menu Carta, Día, 
         Economico y Niño*. Cada arreglo datos, se corresponde a un tipo de Menú.
         Iterar y crear los objetos según corresponda. Cada objeto generado, 
         agregar al ArrayList lista*/
         // Inicio de solución
+        
+        for (int i = 0; i < datos001.length; i++) {
+
+            String np = datos001[i][0];
+            double vim = Double.parseDouble(datos001[i][1]);
+            double vh = Double.parseDouble(datos001[i][2]);
+            double vp = Double.parseDouble(datos001[i][3]);
+            MenuNiños mn1 = new MenuNiños(np, vim,
+                    vh, vp);
+            lista.add(mn1);
+
+        }
+
+        for (int i = 0; i < datos002.length; i++) {
+
+            String np = datos002[i][0];
+            double vim = Double.parseDouble(datos002[i][1]);
+            double d = Double.parseDouble(datos002[i][2]);
+
+            MenuEconomico me1 = new MenuEconomico(np,
+                    vim, d);
+            lista.add(me1);
+
+        }
+
+        for (int i = 0; i < datos003.length; i++) {
+
+            String np = datos003[i][0];
+            double vim = Double.parseDouble(datos003[i][1]);
+            double vp = Double.parseDouble(datos003[i][2]);
+            double vb = Double.parseDouble(datos003[i][3]);
+
+            MenuDia menud = new MenuDia(np,
+                    vim, vp, vb);
+            lista.add(menud);
+
+        }
+
+        for (int i = 0; i < datos004.length; i++) {
+
+            String np = datos004[i][0];
+            double vim = Double.parseDouble(datos004[i][1]);
+            double vg = Double.parseDouble(datos004[i][2]);
+            double vb = Double.parseDouble(datos004[i][3]);
+            double pa = Double.parseDouble(datos004[i][4]);
+            MenuCarta menucar = new MenuCarta(np,
+                    vim, vg, vb, pa);
+            lista.add(menucar);
+        }
         
         // Fin de solución
         

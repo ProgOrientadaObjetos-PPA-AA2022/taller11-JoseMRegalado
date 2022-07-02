@@ -33,6 +33,15 @@ public abstract class Menu {
     public double obtenerValorInicialMenu() {
         return valorInicialMenu;
     }
+    
+    @Override
+    public String toString() {
+        String cadena = String.format("Plato: %s\n"
+                + "Valor Inicial del menu: %.2f\n", 
+                obtenerNombrePlato(),
+                obtenerValorInicialMenu());
+        return cadena;
+    }
    
     
 }

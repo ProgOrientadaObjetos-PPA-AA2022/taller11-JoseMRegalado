@@ -5,7 +5,7 @@ public class MenuNiños extends Menu{
     private double pHelado;
     private double pPastel;
 
-    public MenuNiños(String np, double vm, double vim, double ph, double pp) {
+    public MenuNiños(String np,  double vim, double ph, double pp) {
         super(np, vim);
         pHelado = ph;
         pPastel = pp;

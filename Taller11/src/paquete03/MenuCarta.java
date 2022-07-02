@@ -12,7 +12,7 @@ public class MenuCarta extends Menu{
 
     }
 
-    public MenuCarta(String np, double vm, double vim, double g, 
+    public MenuCarta(String np, double vim, double g, 
             double b, double pa) {
         super(np, vim);
         vGuarnicion = g;
@@ -37,7 +37,7 @@ public class MenuCarta extends Menu{
     }
 
     public void establecerPorcentajeAdicional(double n) {
-        pAdicional = n/100;
+        pAdicional = n;
     }
 
     public double obtenerPorcentajeAdicional() {
@@ -45,8 +45,8 @@ public class MenuCarta extends Menu{
     }
     @Override
     public void establecerValorMenu() {
-        valorMenu = (obtenerValorInicialMenu() + obtenerValorGuarnicion() + 
-                obtenerValorBebida()) + pAdicional * valorInicialMenu;
+        valorMenu = valorInicialMenu + vGuarnicion + vBebida;
+        valorMenu = valorMenu + ((pAdicional * valorMenu) / 100);
     }
     
     @Override

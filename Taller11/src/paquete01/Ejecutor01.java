@@ -8,6 +8,7 @@ package paquete01;
 import java.util.ArrayList;
 import paquete02.Menu;
 import paquete03.*;
+import paquete04.Cuenta;
 
 /**
  *
@@ -21,7 +22,34 @@ public class Ejecutor01 {
     public static void main(String[] args) {
 
         ArrayList<Menu> menu = new ArrayList<>();
+        MenuNiños mn1 = new MenuNiños("Niños 01", 2, 1, 1.5);
+        mn1.establecerValorMenu();
 
+        MenuNiños mn2 = new MenuNiños("Niños 02", 3, 1, 1.5);
+        mn2.establecerValorMenu();
+        
+        menu.add(mn1);
+        menu.add(mn2);
+
+        MenuEconomico me1 = new MenuEconomico("Econo 001", 4, 25);
+        me1.establecerValorMenu();
+        menu.add(me1);
+
+        MenuDia md1 = new MenuDia("Dia 001", 5, 1, 1);
+        md1.establecerValorMenu();
+        menu.add(md1);
+
+        MenuCarta mc1 = new MenuCarta("Carta001", 6, 1.5, 2, 10);
+        mc1.establecerValorMenu();
+        menu.add(mc1);
+
+        Cuenta c = new Cuenta("Juan Perez", menu, 10);
+        for (int i = 0; i < menu.size(); i++) {
+            c.establecerSubtotal();
+            c.establecerValorCancelar();
+        }
+
+        System.out.println(c);
         
     }
     

@@ -58,4 +58,28 @@ public class Cuenta {
     public double obtenerValorCancelar() {
         return valorCancelar;
     }
+    
+    @Override
+    public String toString() {
+        String cadena = String.format("Factura\n"
+                + "Cliente: %s\n",
+                obtenerNombreCliente());
+        for (int i = 0; i < obtenerListaCartas().size(); i++) {
+            cadena = String.format("%s"
+                    + "%s\n",
+                    cadena,
+                    obtenerListaCartas().get(i));
+
+        }
+        cadena = String.format("\n%s"
+                + "Subtotal: %.2f\n"
+                + "Iva: %.2f\n"
+                + "Total a pagar: %.2f\n",
+                cadena,
+                obtenerSubtotal(),
+                obtenerIva(),
+                obtenerValorCancelar());
+        return cadena;
+    }
+
 }

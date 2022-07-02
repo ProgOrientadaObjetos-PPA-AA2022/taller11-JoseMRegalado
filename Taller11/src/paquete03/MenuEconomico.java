@@ -4,14 +4,14 @@ import paquete02.Menu;
 public class MenuEconomico extends Menu{
     double pDescuento;
 
-    public MenuEconomico(String np, double vm, double vim, double pd) {
+    public MenuEconomico(String np,  double vim, double pd) {
         super(np, vim);
         pDescuento = pd;
     }
     
     
     public void establecerPorcentajeDescuento(double n) {
-        pDescuento = n/100;
+        pDescuento = n;
     }
 
     public double obtenerPorcentajeDescuento() {
@@ -20,7 +20,7 @@ public class MenuEconomico extends Menu{
     
     @Override
     public void establecerValorMenu() {
-        valorMenu = valorInicialMenu - (pDescuento * valorInicialMenu);
+        valorMenu = valorInicialMenu - (pDescuento * valorInicialMenu)/100;
     }
 
     @Override

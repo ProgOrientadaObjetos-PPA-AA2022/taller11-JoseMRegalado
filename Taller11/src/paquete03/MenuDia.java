@@ -6,7 +6,7 @@ public class MenuDia extends Menu{
     private double vPostre;
     private double vBebida;
 
-    public MenuDia(String np, double vm, double vim, double vp, double vb) {
+    public MenuDia(String np, double vim, double vp, double vb) {
         super(np, vim);
         vPostre = vp;
         vBebida = vb;
